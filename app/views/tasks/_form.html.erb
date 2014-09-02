@@ -1,0 +1,13 @@
+<%= form_for @task  do |f|%>
+	<% if @task.errors.any? %>
+		<ul>
+			<% @task.errors.full_messages.each do |message| %>
+
+				<li><%= message %></li>
+				<%end%>
+		<%end%>
+	<%= f.label :task %>
+	<%= f.text_field :task %>
+
+	<%= f.submit %>
+<%end%>
